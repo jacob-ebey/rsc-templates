@@ -15,7 +15,7 @@ import {
 } from "react-router/rsc";
 
 import { prerender } from "./prerender" with { env: "react-client" };
-import { routes } from "./routes";
+import { routes } from "./routes/routes";
 
 const decodeCallServer: unstable_DecodeCallServerFunction = async (
   actionId,

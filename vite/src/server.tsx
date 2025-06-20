@@ -10,7 +10,7 @@ import {
   unstable_matchRSCServerRequest,
 } from "react-router/rsc";
 
-import { routes } from "./routes";
+import { routes } from "./routes/routes";
 
 const decodeCallServer: unstable_DecodeCallServerFunction = async (
   actionId,
