@@ -9,7 +9,6 @@ export { ErrorBoundary } from "./client";
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {import.meta.viteRsc.loadCss()}
       <ClientLayout>{children}</ClientLayout>
     </>
   );

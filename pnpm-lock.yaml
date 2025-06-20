@@ -104,8 +104,8 @@ importers:
         version: 0.0.0-experimental-451e72371(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@hiogawa/vite-rsc':
-        specifier: 0.4.3
-        version: 0.4.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1))
+        specifier: 0.4.4
+        version: 0.4.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1))
       '@tailwindcss/typography':
         specifier: 0.5.16
         version: 0.5.16(tailwindcss@4.1.10)
@@ -379,11 +379,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@hiogawa/transforms@0.1.2':
-    resolution: {integrity: sha512-0izNRzKgRakIChWua/MJH4Bb4bF92Wa9aU3ab7hux3zSE4nnTJ7KvOXLVwgNt+rExysmI9G3bvQawwOifiUKtA==}
+  '@hiogawa/transforms@0.1.3':
+    resolution: {integrity: sha512-vzDCWgXIk4D6Ea2aBSuNqTssN6sTAqm8xzeqXea68o9TvBm5IZhQ3u/8vmWEiJpAtrlTohcTc1Hfgi025iFpGA==}
 
-  '@hiogawa/vite-rsc@0.4.3':
-    resolution: {integrity: sha512-MM0DxODvcuL6aJoDZ3+PwYqAjY1xo/+uF3/3ai5xlN6+aIMIQV+pptQDWXimU/UqJjec65is1CzLNs5QNWqVeA==}
+  '@hiogawa/vite-rsc@0.4.4':
+    resolution: {integrity: sha512-Yucbgb6g1bC3S6wofT+ZdtEhnwBZIt4YMZWxXzH9yHugcen0bUtasSATb1qGGraCxu03y8xtHOstXgS8sjdUOQ==}
     peerDependencies:
       react: '*'
       react-dom: '*'
@@ -1381,6 +1381,9 @@ packages:
     resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
     engines: {node: '>= 0.4'}
 
+  es-module-lexer@1.7.0:
+    resolution: {integrity: sha512-jEQoCwk8hyb2AZziIOLhDqpm5+2ww5uIE6lkO/6jcOCusfk6LhMHpXXfBLXTZ7Ydyt0j4VoUQv6uGNYbdW+kBA==}
+
   es-object-atoms@1.1.1:
     resolution: {integrity: sha512-FGgH2h8zKNim9ljj7dankFPcICIK9Cp5bm+c2gQSYePhpaG5+esrLODihIorn+Pe6FGJzWhXQotPv73jTaldXA==}
     engines: {node: '>= 0.4'}
@@ -1931,6 +1934,9 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
+  turbo-stream@3.1.0:
+    resolution: {integrity: sha512-tVI25WEXl4fckNEmrq70xU1XumxUwEx/FZD5AgEcV8ri7Wvrg2o7GEq8U7htrNx3CajciGm+kDyhRf5JB6t7/A==}
+
   type-fest@0.20.2:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
     engines: {node: '>=10'}
@@ -2240,19 +2246,21 @@ snapshots:
   '@esbuild/win32-x64@0.25.5':
     optional: true
 
-  '@hiogawa/transforms@0.1.2':
+  '@hiogawa/transforms@0.1.3':
     dependencies:
       estree-walker: 3.0.3
       magic-string: 0.30.17
       periscopic: 4.0.2
 
-  '@hiogawa/vite-rsc@0.4.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1))':
+  '@hiogawa/vite-rsc@0.4.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1))':
     dependencies:
-      '@hiogawa/transforms': 0.1.2
+      '@hiogawa/transforms': 0.1.3
       '@mjackson/node-fetch-server': 0.6.1
+      es-module-lexer: 1.7.0
       magic-string: 0.30.17
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
+      turbo-stream: 3.1.0
       vite: 6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)
       vitefu: 1.0.6(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1))
 
@@ -3432,6 +3440,8 @@ snapshots:
 
   es-errors@1.3.0: {}
 
+  es-module-lexer@1.7.0: {}
+
   es-object-atoms@1.1.1:
     dependencies:
       es-errors: 1.3.0
@@ -4014,6 +4024,8 @@ snapshots:
   toidentifier@1.0.1: {}
 
   tslib@2.8.1: {}
+
+  turbo-stream@3.1.0: {}
 
   type-fest@0.20.2: {}
 
