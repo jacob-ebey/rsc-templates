@@ -43,9 +43,9 @@ function callServer(request: Request) {
 }
 
 export default async function handler(request: Request) {
-  const ssr = await import.meta.viteRsc.loadSsrModule<
+  const ssr = await import.meta.viteRsc.loadModule<
     typeof import("./prerender")
-  >("index");
+  >("ssr", "index");
 
   return ssr.prerender(request, callServer);
 }

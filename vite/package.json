@@ -18,7 +18,7 @@
     "react-router": "0.0.0-experimental-451e72371"
   },
   "devDependencies": {
-    "@hiogawa/vite-rsc": "0.4.3",
+    "@hiogawa/vite-rsc": "0.4.4",
     "@tailwindcss/typography": "0.5.16",
     "@tailwindcss/vite": "^4.1.10",
     "@types/node": "^24.0.3",
