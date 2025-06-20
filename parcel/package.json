@@ -30,7 +30,7 @@
     "express": "^5.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "0.0.0-experimental-451e72371",
+    "react-router": "0.0.0-experimental-ab9ed70c6",
     "react-server-dom-parcel": "^19.1.0"
   },
   "devDependencies": {
