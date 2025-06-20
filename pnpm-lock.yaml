@@ -8,9 +8,15 @@ importers:
 
   .:
     devDependencies:
+      path-browserify:
+        specifier: ^1.0.1
+        version: 1.0.1
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
+      process:
+        specifier: ^0.11.10
+        version: 0.11.10
 
   parcel:
     dependencies:
@@ -33,8 +39,8 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
       react-router:
-        specifier: 0.0.0-experimental-451e72371
-        version: 0.0.0-experimental-451e72371(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 0.0.0-experimental-ab9ed70c6
+        version: 0.0.0-experimental-ab9ed70c6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-server-dom-parcel:
         specifier: ^19.1.0
         version: 19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -100,8 +106,72 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
       react-router:
-        specifier: 0.0.0-experimental-451e72371
-        version: 0.0.0-experimental-451e72371(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 0.0.0-experimental-ab9ed70c6
+        version: 0.0.0-experimental-ab9ed70c6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+    devDependencies:
+      '@hiogawa/vite-rsc':
+        specifier: 0.4.3
+        version: 0.4.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1))
+      '@tailwindcss/typography':
+        specifier: 0.5.16
+        version: 0.5.16(tailwindcss@4.1.10)
+      '@tailwindcss/vite':
+        specifier: ^4.1.10
+        version: 4.1.10(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1))
+      '@types/node':
+        specifier: ^24.0.3
+        version: 24.0.3
+      '@types/react':
+        specifier: ^19.1.8
+        version: 19.1.8
+      '@types/react-dom':
+        specifier: ^19.1.6
+        version: 19.1.6(@types/react@19.1.8)
+      '@vitejs/plugin-react':
+        specifier: ^4.5.2
+        version: 4.5.2(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1))
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
+      tailwindcss:
+        specifier: ^4.1.10
+        version: 4.1.10
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
+      vite:
+        specifier: ^6.3.5
+        version: 6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)
+      vite-plugin-devtools-json:
+        specifier: 0.2.0
+        version: 0.2.0(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1))
+
+  vite-static:
+    dependencies:
+      '@mjackson/node-fetch-server':
+        specifier: 0.7.0
+        version: 0.7.0
+      '@types/compression':
+        specifier: ^1.8.1
+        version: 1.8.1
+      '@types/express':
+        specifier: ^5.0.3
+        version: 5.0.3
+      compression:
+        specifier: ^1.8.0
+        version: 1.8.0
+      express:
+        specifier: ^5.1.0
+        version: 5.1.0
+      react:
+        specifier: ^19.1.0
+        version: 19.1.0
+      react-dom:
+        specifier: ^19.1.0
+        version: 19.1.0(react@19.1.0)
+      react-router:
+        specifier: 0.0.0-experimental-ab9ed70c6
+        version: 0.0.0-experimental-ab9ed70c6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@hiogawa/vite-rsc':
         specifier: 0.4.3
@@ -1729,6 +1799,9 @@ packages:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}
     engines: {node: '>= 0.8'}
 
+  path-browserify@1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
+
   path-key@3.1.1:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
     engines: {node: '>=8'}
@@ -1767,6 +1840,10 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  process@0.11.10:
+    resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
+    engines: {node: '>= 0.6.0'}
+
   proxy-addr@2.0.7:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
     engines: {node: '>= 0.10'}
@@ -1796,8 +1873,8 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
-  react-router@0.0.0-experimental-451e72371:
-    resolution: {integrity: sha512-Q5hQrCHxWLfF4fTKRhnqvp16BlW8DZHhAAMDRLna1XO8XY+M0FndO1jpXMSKc1TSJA78PsCjs3lInaNSlYyofg==}
+  react-router@0.0.0-experimental-ab9ed70c6:
+    resolution: {integrity: sha512-U6P5hdn4Jk2gibzgCxIriQkZmUlkpx5wWVyBv//B5LCDcwyEpiCSe63QzESDybf16FCE6qCGtsATNx8wRmtxwA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -3793,6 +3870,8 @@ snapshots:
 
   parseurl@1.3.3: {}
 
+  path-browserify@1.0.1: {}
+
   path-key@3.1.1: {}
 
   path-to-regexp@8.2.0: {}
@@ -3824,6 +3903,8 @@ snapshots:
 
   prettier@3.5.3: {}
 
+  process@0.11.10: {}
+
   proxy-addr@2.0.7:
     dependencies:
       forwarded: 0.2.0
@@ -3851,7 +3932,7 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-router@0.0.0-experimental-451e72371(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-router@0.0.0-experimental-ab9ed70c6(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       cookie: 1.0.2
       react: 19.1.0
