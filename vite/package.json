@@ -4,7 +4,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "cross-env NODE_ENV=development vite",
-    "start": "cross-env NODE_ENV=production node server.js"
+    "start": "cross-env NODE_ENV=production node server.js",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@mjackson/node-fetch-server": "0.7.0",
@@ -26,6 +27,7 @@
     "@vitejs/plugin-react": "^4.5.2",
     "cross-env": "^7.0.3",
     "tailwindcss": "^4.1.10",
+    "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-devtools-json": "0.2.0"
   }
