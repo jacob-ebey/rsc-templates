@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "cross-env NODE_ENV=development vite",
+    "start": "cross-env NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "@mjackson/node-fetch-server": "0.7.0",
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.3",
+    "compression": "^1.8.0",
+    "express": "^5.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "0.0.0-experimental-451e72371"
+  },
+  "devDependencies": {
+    "@hiogawa/vite-rsc": "0.4.3",
+    "@tailwindcss/typography": "0.5.16",
+    "@tailwindcss/vite": "^4.1.10",
+    "@types/node": "^24.0.3",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "cross-env": "^7.0.3",
+    "tailwindcss": "^4.1.10",
+    "vite": "^6.3.5",
+    "vite-plugin-devtools-json": "0.2.0"
+  }
+}
