@@ -1,7 +1,7 @@
 {
   "$schema": "https://unpkg.com/wrangler/config-schema.json",
   "name": "cloudflare-vite-get-started-server",
-  "main": "./server.tsx",
+  "main": "./src/server.tsx",
   "compatibility_date": "2025-06-17",
   "compatibility_flags": ["nodejs_als"],
 }

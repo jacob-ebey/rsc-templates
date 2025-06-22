@@ -1,0 +1,15 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "cloudflare-vite-get-started-server",
+  "main": "./src/server.tsx",
+  "compatibility_date": "2025-06-17",
+  "compatibility_flags": ["nodejs_als"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "cf-vite-get-started-db",
+      "database_id": "1ab1304d-8ab5-4af4-9665-3363bf71280f",
+      "migrations_dir": "src/db/migrations",
+    },
+  ],
+}

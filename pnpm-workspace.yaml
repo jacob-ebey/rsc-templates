@@ -1,4 +1,5 @@
 packages:
   - 'cloudflare'
+  - 'cloudflare-d1'
   - 'parcel'
   - 'vite'

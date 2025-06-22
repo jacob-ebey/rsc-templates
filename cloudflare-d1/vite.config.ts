@@ -21,6 +21,7 @@ export default defineConfig({
     cloudflare({
       configPath: "./wrangler.prerender.jsonc",
       viteEnvironment: { name: "ssr" },
+      persistState: true,
       auxiliaryWorkers: [
         {
           configPath: "./wrangler.server.jsonc",
