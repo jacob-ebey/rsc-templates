@@ -6,31 +6,12 @@ import { defineConfig } from "vite";
 import devtoolsJson from "vite-plugin-devtools-json";
 
 export default defineConfig({
-  environments: {
-    rsc: {
-      build: {
-        rollupOptions: {
-          // ensure `default` export only in cloudflare entry output
-          preserveEntrySignatures: "exports-only",
-        },
-      },
-    },
-    ssr: {
-      build: {
-        rollupOptions: {
-          // ensure `default` export only in cloudflare entry output
-          preserveEntrySignatures: "exports-only",
-        },
-      },
-    },
-  },
   plugins: [
     tailwindcss(),
     react(),
     rsc({
       entries: {
         client: "src/browser.tsx",
-        ssr: "src/prerender.tsx",
       },
       serverHandler: false,
       loadModuleDevProxy: true,
