@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "cloudflare-vite-get-started",
+  "main": "./prerender.tsx",
+  "workers_dev": true,
+  "compatibility_date": "2025-06-17",
+  "compatibility_flags": ["nodejs_als"],
+  "services": [
+    {
+      "binding": "SERVER",
+      "service": "cloudflare-vite-get-started-server",
+    },
+  ],
+}
