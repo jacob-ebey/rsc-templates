@@ -6,7 +6,7 @@ import { redirect } from "react-router/rsc";
 
 import { getDb } from "@/db/db";
 import * as schema from "@/db/schema";
-import { destroySession, getSession } from "@/session";
+import { destroySession, getSession } from "@/lib/session";
 
 import type { LoginFormState, SignupFormState } from "./definitions";
 import { LoginFormSchema, SignupFormSchema } from "./definitions";

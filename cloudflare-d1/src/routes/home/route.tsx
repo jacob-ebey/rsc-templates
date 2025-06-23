@@ -10,9 +10,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { getDb } from "@/db/db";
-import { getSession } from "@/session";
 import { TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
+import { getSession } from "@/lib/session";
 
 import { AuthTabs } from "./client";
 
