@@ -7,6 +7,11 @@
     "start": "cross-env NODE_ENV=production node server.js",
     "typecheck": "tsc --noEmit"
   },
+  "overrides": {
+    "react": "0.0.0-experimental-06e89951-20250620",
+    "react-dom": "0.0.0-experimental-06e89951-20250620",
+    "react-router": "0.0.0-experimental-e5dac68cb"
+  },
   "dependencies": {
     "@mjackson/node-fetch-server": "0.7.0",
     "compression": "^1.8.0",

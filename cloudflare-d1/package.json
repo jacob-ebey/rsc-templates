@@ -11,6 +11,11 @@
     "typegen": "wrangler types -c ./wrangler.server.jsonc --env-interface ServerEnv",
     "typecheck": "tsc --noEmit"
   },
+  "overrides": {
+    "react": "0.0.0-experimental-06e89951-20250620",
+    "react-dom": "0.0.0-experimental-06e89951-20250620",
+    "react-router": "0.0.0-experimental-e5dac68cb"
+  },
   "dependencies": {
     "@conform-to/react": "^1.7.2",
     "@conform-to/zod": "^1.7.2",
@@ -46,8 +51,5 @@
     "vite-plugin-devtools-json": "0.2.0",
     "vite-tsconfig-paths": "^5.1.4",
     "wrangler": "^4.20.5"
-  },
-  "overrides": {
-    "react-router": "$react-router"
   }
 }
