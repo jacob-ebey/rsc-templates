@@ -2,3 +2,5 @@
 .wrangler
 node_modules
 dist
+.vars
+*.vars

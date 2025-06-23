@@ -1,5 +1,6 @@
 import {
   decodeAction,
+  decodeFormState,
   decodeReply,
   loadServerAction,
   renderToReadableStream,
@@ -11,6 +12,7 @@ import {
 } from "react-router/rsc";
 
 import { routes } from "./routes/routes";
+import { provideSession } from "./session";
 
 const decodeCallServer: unstable_DecodeCallServerFunction = async (
   actionId,
@@ -29,17 +31,20 @@ const decodeFormAction: unstable_DecodeFormActionFunction = async (
 
 export default {
   fetch(request) {
-    return unstable_matchRSCServerRequest({
-      decodeCallServer,
-      decodeFormAction,
-      request,
-      routes: routes(),
-      generateResponse(match) {
-        return new Response(renderToReadableStream(match.payload), {
-          status: match.statusCode,
-          headers: match.headers,
-        });
-      },
+    return provideSession(request, () => {
+      return unstable_matchRSCServerRequest({
+        decodeCallServer,
+        decodeFormAction,
+        decodeFormState,
+        request,
+        routes: routes(),
+        generateResponse(match) {
+          return new Response(renderToReadableStream(match.payload), {
+            status: match.statusCode,
+            headers: match.headers,
+          });
+        },
+      });
     });
   },
 } satisfies ExportedHandler<ServerEnv>;

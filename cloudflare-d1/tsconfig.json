@@ -11,7 +11,16 @@
     "module": "ESNext",
     "target": "ESNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "types": ["vite/client", "@hiogawa/vite-rsc/types"],
-    "jsx": "react-jsx"
+    "types": [
+      "vite/client",
+      "@hiogawa/vite-rsc/types",
+      "react/experimental",
+      "react-dom/experimental"
+    ],
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   }
 }

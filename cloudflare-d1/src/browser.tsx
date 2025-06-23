@@ -24,12 +24,19 @@ setServerCallback(
 );
 
 decode(getServerStream()).then((payload) => {
-  React.startTransition(() => {
+  React.startTransition(async () => {
+    const formState =
+      payload.type === "render" ? await payload.formState : undefined;
+
     hydrateRoot(
       document,
       <React.StrictMode>
         <RSCHydratedRouter decode={decode} payload={payload} />
-      </React.StrictMode>
+      </React.StrictMode>,
+      {
+        // @ts-expect-error - no types for this yet
+        formState,
+      }
     );
   });
 });

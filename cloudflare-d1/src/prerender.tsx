@@ -18,9 +18,15 @@ export default {
       callServer: (request) => env.SERVER.fetch(request),
       decode: createFromReadableStream,
       async renderHTML(getPayload) {
+        const payload = await getPayload();
+        const formState =
+          payload.type === "render" ? await payload.formState : undefined;
+
         return await renderHTMLToReadableStream(
           React.createElement(unstable_RSCStaticRouter, { getPayload }),
           {
+            // @ts-expect-error - no types for this yet
+            formState,
             bootstrapScriptContent,
           }
         );
