@@ -1,11 +1,12 @@
 "use client-entry";
 
-import * as React from "react";
+import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
+import type { unstable_DecodeServerResponseFunction as DecodeServerResponseFunction } from "react-router";
 import {
-  unstable_createCallServer,
-  unstable_getServerStream,
-  unstable_RSCHydratedRouter,
+  unstable_createCallServer as createCallServer,
+  unstable_getServerStream as getServerStream,
+  unstable_RSCHydratedRouter as RSCHydratedRouter,
 } from "react-router";
 import {
   createFromReadableStream,
@@ -14,35 +15,25 @@ import {
   // @ts-expect-error - no types for this yet
 } from "react-server-dom-parcel/client";
 
-const callServer = unstable_createCallServer({
-  decode: (body) => createFromReadableStream(body, { callServer }),
-  encodeAction: (args) => encodeReply(args),
-});
+const decode: DecodeServerResponseFunction = (body) =>
+  createFromReadableStream(body);
 
-setServerCallback(callServer);
+// Create and set the callServer function to support post-hydration server actions.
+setServerCallback(
+  createCallServer({
+    decode,
+    encodeAction: (args) => encodeReply(args),
+  })
+);
 
-createFromReadableStream(unstable_getServerStream()).then((payload: any) => {
-  React.startTransition(async () => {
+// Get and decode the initial server payload
+decode(getServerStream()).then((payload) => {
+  startTransition(async () => {
     hydrateRoot(
       document,
-      React.createElement(
-        React.StrictMode,
-        null,
-        React.createElement(unstable_RSCHydratedRouter, {
-          decode: (body) => createFromReadableStream(body),
-          payload,
-        })
-      )
+      <StrictMode>
+        <RSCHydratedRouter decode={decode} payload={payload} />
+      </StrictMode>
     );
   });
 });
-
-if (process.env.NODE_ENV !== "production") {
-  const ogError = console.error.bind(console);
-  console.error = (...args) => {
-    if (args[1] === Symbol.for("react-router.redirect")) {
-      return;
-    }
-    ogError(...args);
-  };
-}

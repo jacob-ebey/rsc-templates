@@ -20,7 +20,7 @@ import { Label } from "@/components/ui/label";
 
 const FormContext = createContext<{ pending: boolean } | null>(null);
 
-export function useFormState() {
+export function useFormStatus() {
   const reactStatus = useReactFormStatus();
   const ctx = use(FormContext);
 

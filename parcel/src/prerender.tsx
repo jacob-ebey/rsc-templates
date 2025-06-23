@@ -1,8 +1,7 @@
-import * as React from "react";
 import { renderToReadableStream as renderHTMLToReadableStream } from "react-dom/server.edge";
 import {
-  unstable_routeRSCServerRequest,
-  unstable_RSCStaticRouter,
+  unstable_routeRSCServerRequest as routeRSCServerRequest,
+  unstable_RSCStaticRouter as RSCStaticRouter,
 } from "react-router";
 // @ts-expect-error - no types for this yet
 import { createFromReadableStream } from "react-server-dom-parcel/client.edge";
@@ -12,13 +11,17 @@ export async function prerender(
   callServer: (request: Request) => Promise<Response>,
   bootstrapScriptContent: string | undefined
 ): Promise<Response> {
-  return await unstable_routeRSCServerRequest({
+  return await routeRSCServerRequest({
+    // The incoming request.
     request,
+    // How to call the React Server.
     callServer,
+    // Provide the React Server touchpoints.
     decode: createFromReadableStream,
+    // Render the router to HTML.
     async renderHTML(getPayload) {
       return await renderHTMLToReadableStream(
-        React.createElement(unstable_RSCStaticRouter, { getPayload }),
+        <RSCStaticRouter getPayload={getPayload} />,
         {
           bootstrapScriptContent,
         }
