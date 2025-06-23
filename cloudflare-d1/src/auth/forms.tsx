@@ -3,11 +3,11 @@
 import { useActionState } from "react";
 import { useSearchParams } from "react-router";
 
-import { Input, FormErrors, ZodForm } from "../components/form";
+import { FormErrors, Input, ZodForm } from "@/components/form";
+import { Button } from "@/components/ui/button";
 
 import { login, signup } from "./actions";
 import { LoginFormSchema, SignupFormSchema } from "./definitions";
-import { Button } from "@/components/ui/button";
 
 export function LoginForm() {
   const [lastResult, action, pending] = useActionState(login, undefined);

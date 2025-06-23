@@ -5,10 +5,10 @@ import {
   renderToReadableStream,
 } from "@hiogawa/vite-rsc/rsc";
 import {
+  unstable_matchRSCServerRequest as matchRSCServerRequest,
   type unstable_DecodeCallServerFunction as DecodeCallServerFunction,
   type unstable_DecodeFormActionFunction as DecodeFormActionFunction,
 } from "react-router/rsc";
-import { unstable_matchRSCServerRequest as matchRSCServerRequest } from "react-router/rsc";
 
 import { routes } from "./routes/routes";
 

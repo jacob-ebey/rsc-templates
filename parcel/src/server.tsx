@@ -1,6 +1,11 @@
 import { createRequestListener } from "@mjackson/node-fetch-server";
 import compression from "compression";
 import express from "express";
+import type {
+  unstable_DecodeCallServerFunction as DecodeCallServerFunction,
+  unstable_DecodeFormActionFunction as DecodeFormActionFunction,
+} from "react-router/rsc";
+import { unstable_matchRSCServerRequest as matchRSCServerRequest } from "react-router/rsc";
 import {
   decodeAction,
   decodeFormState,
@@ -9,11 +14,6 @@ import {
   renderToReadableStream,
   // @ts-expect-error - no types for this yet
 } from "react-server-dom-parcel/server.edge";
-import type {
-  unstable_DecodeCallServerFunction as DecodeCallServerFunction,
-  unstable_DecodeFormActionFunction as DecodeFormActionFunction,
-} from "react-router/rsc";
-import { unstable_matchRSCServerRequest as matchRSCServerRequest } from "react-router/rsc";
 
 // Import the prerender function from the client envrionment
 import { prerender } from "./prerender" with { env: "react-client" };

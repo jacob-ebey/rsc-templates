@@ -2,14 +2,14 @@
 
 import { parseWithZod } from "@conform-to/zod/v4";
 import * as bcrypt from "bcrypt-ts";
+import { redirect } from "react-router/rsc";
 
-import { getDb } from "../db/db";
-import * as schema from "../db/schema";
-import { destroySession, getSession } from "../session";
+import { getDb } from "@/db/db";
+import * as schema from "@/db/schema";
+import { destroySession, getSession } from "@/session";
 
 import type { LoginFormState, SignupFormState } from "./definitions";
 import { LoginFormSchema, SignupFormSchema } from "./definitions";
-import { redirect } from "react-router/rsc";
 
 export async function logout() {
   destroySession();
