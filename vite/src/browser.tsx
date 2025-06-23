@@ -3,19 +3,20 @@ import {
   encodeReply,
   setServerCallback,
 } from "@hiogawa/vite-rsc/browser";
-import * as React from "react";
+import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
 import type { unstable_DecodeServerResponseFunction as DecodeServerResponseFunction } from "react-router";
 import {
-  unstable_RSCHydratedRouter as RSCHydratedRouter,
   unstable_createCallServer as createCallServer,
   unstable_getServerStream as getServerStream,
+  unstable_RSCHydratedRouter as RSCHydratedRouter,
 } from "react-router";
 
 const decode: DecodeServerResponseFunction = (
   body: ReadableStream<Uint8Array>
 ) => createFromReadableStream(body);
 
+// Create and set the callServer function to support post-hydration server actions.
 setServerCallback(
   createCallServer({
     decode,
@@ -23,23 +24,21 @@ setServerCallback(
   })
 );
 
+// Get and decode the initial server payload
 decode(getServerStream()).then((payload) => {
-  React.startTransition(() => {
+  startTransition(async () => {
+    const formState =
+      payload.type === "render" ? await payload.formState : undefined;
+
     hydrateRoot(
       document,
-      <React.StrictMode>
+      <StrictMode>
         <RSCHydratedRouter decode={decode} payload={payload} />
-      </React.StrictMode>
+      </StrictMode>,
+      {
+        // @ts-expect-error - no types for this yet
+        formState,
+      }
     );
   });
 });
-
-if (import.meta.env.DEV) {
-  const ogError = console.error.bind(console);
-  console.error = (...args) => {
-    if (args[1] === Symbol.for("react-router.redirect")) {
-      return;
-    }
-    ogError(...args);
-  };
-}

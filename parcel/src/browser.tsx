@@ -29,11 +29,18 @@ setServerCallback(
 // Get and decode the initial server payload
 decode(getServerStream()).then((payload) => {
   startTransition(async () => {
+    const formState =
+      payload.type === "render" ? await payload.formState : undefined;
+
     hydrateRoot(
       document,
       <StrictMode>
         <RSCHydratedRouter decode={decode} payload={payload} />
-      </StrictMode>
+      </StrictMode>,
+      {
+        // @ts-expect-error - no types for this yet
+        formState,
+      }
     );
   });
 });

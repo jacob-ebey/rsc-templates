@@ -20,10 +20,16 @@ export async function prerender(
     decode: createFromReadableStream,
     // Render the router to HTML.
     async renderHTML(getPayload) {
+      const payload = await getPayload();
+      const formState =
+        payload.type === "render" ? await payload.formState : undefined;
+
       return await renderHTMLToReadableStream(
         <RSCStaticRouter getPayload={getPayload} />,
         {
           bootstrapScriptContent,
+          // @ts-expect-error - no types for this yet
+          formState,
         }
       );
     },
