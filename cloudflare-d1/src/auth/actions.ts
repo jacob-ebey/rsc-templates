@@ -2,7 +2,7 @@
 
 import { parseWithZod } from "@conform-to/zod/v4";
 import * as bcrypt from "bcrypt-ts";
-import { redirect } from "react-router/rsc";
+import { redirect } from "react-router";
 
 import { getDb } from "@/db/db";
 import * as schema from "@/db/schema";

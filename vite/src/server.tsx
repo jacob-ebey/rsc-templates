@@ -8,8 +8,8 @@ import {
 import type {
   unstable_DecodeCallServerFunction as DecodeCallServerFunction,
   unstable_DecodeFormActionFunction as DecodeFormActionFunction,
-} from "react-router/rsc";
-import { unstable_matchRSCServerRequest as matchRSCServerRequest } from "react-router/rsc";
+} from "react-router";
+import { unstable_matchRSCServerRequest as matchRSCServerRequest } from "react-router";
 
 import { routes } from "./routes/routes";
 

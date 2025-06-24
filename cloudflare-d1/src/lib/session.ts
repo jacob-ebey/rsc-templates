@@ -1,8 +1,8 @@
 import { env } from "cloudflare:workers";
 import { AsyncLocalStorage } from "node:async_hooks";
 
-import type { Session } from "react-router/rsc";
-import { createCookieSessionStorage } from "react-router/rsc";
+import type { Session } from "react-router";
+import { createCookieSessionStorage } from "react-router";
 
 type SessionData = {
   userId?: string;

@@ -1,6 +1,6 @@
 "use server-entry";
 
-import type { unstable_ServerRouteObject as ServerRouteObject } from "react-router/rsc";
+import type { unstable_ServerRouteObject as ServerRouteObject } from "react-router";
 
 import "../browser";
 

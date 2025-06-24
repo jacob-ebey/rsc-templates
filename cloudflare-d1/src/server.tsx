@@ -8,7 +8,7 @@ import {
   unstable_matchRSCServerRequest as matchRSCServerRequest,
   type unstable_DecodeCallServerFunction as DecodeCallServerFunction,
   type unstable_DecodeFormActionFunction as DecodeFormActionFunction,
-} from "react-router/rsc";
+} from "react-router";
 
 import { provideSession } from "./lib/session";
 import { routes } from "./routes/routes";

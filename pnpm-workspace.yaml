@@ -3,3 +3,9 @@ packages:
   - 'cloudflare-d1'
   - 'parcel'
   - 'vite'
+  - 'vite-static'
+
+overrides:
+  "react": "0.0.0-experimental-06e89951-20250620"
+  "react-dom": "0.0.0-experimental-06e89951-20250620"
+  "react-router": "0.0.0-experimental-b65537812"
