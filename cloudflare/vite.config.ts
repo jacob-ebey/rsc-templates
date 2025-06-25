@@ -6,6 +6,25 @@ import { defineConfig } from "vite";
 import devtoolsJson from "vite-plugin-devtools-json";
 
 export default defineConfig({
+  environments: {
+    client: {
+      optimizeDeps: {
+        include: ["react-router", "react-router/internal/react-server-client"],
+      },
+    },
+    ssr: {
+      optimizeDeps: {
+        include: ["react-router > cookie", "react-router > set-cookie-parser"],
+        exclude: ["react-router"],
+      },
+    },
+    rsc: {
+      optimizeDeps: {
+        include: ["react-router > cookie", "react-router > set-cookie-parser"],
+        exclude: ["react-router"],
+      },
+    },
+  },
   plugins: [
     tailwindcss(),
     react(),

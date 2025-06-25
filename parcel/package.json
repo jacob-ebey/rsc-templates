@@ -26,7 +26,7 @@
   "overrides": {
     "react": "0.0.0-experimental-06e89951-20250620",
     "react-dom": "0.0.0-experimental-06e89951-20250620",
-    "react-router": "0.0.0-experimental-b65537812"
+    "react-router": "0.0.0-experimental-7e26cc4bc"
   },
   "dependencies": {
     "@mjackson/node-fetch-server": "0.7.0",
@@ -37,7 +37,7 @@
     "express": "^5.1.0",
     "react": "0.0.0-experimental-06e89951-20250620",
     "react-dom": "0.0.0-experimental-06e89951-20250620",
-    "react-router": "0.0.0-experimental-b65537812",
+    "react-router": "0.0.0-experimental-7e26cc4bc",
     "react-server-dom-parcel": "0.0.0-experimental-06e89951-20250620"
   },
   "devDependencies": {

@@ -14,9 +14,9 @@ import { unstable_matchRSCServerRequest as matchRSCServerRequest } from "react-r
 import { routes } from "./routes/routes";
 
 // Decode and load actions by ID to support post-hydration server actions.
-const decodeCallServer: DecodeCallServerFunction = async (actionId, reply) => {
+const decodeCallServer: DecodeCallServerFunction = async (id, reply) => {
   const args = await decodeReply(reply);
-  const action = await loadServerAction(actionId);
+  const action = await loadServerAction(id);
   return action.bind(null, ...args);
 };
 
@@ -25,7 +25,7 @@ const decodeFormAction: DecodeFormActionFunction = async (formData) => {
   return await decodeAction(formData);
 };
 
-function callServer(request: Request) {
+function fetchServer(request: Request) {
   return matchRSCServerRequest({
     // Provide the React Server touchpoints.
     decodeCallServer,
@@ -51,5 +51,5 @@ export default async function handler(request: Request) {
     typeof import("./prerender")
   >("ssr", "index");
 
-  return ssr.prerender(request, callServer);
+  return ssr.prerender(request, fetchServer);
 }

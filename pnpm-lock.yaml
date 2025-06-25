@@ -7,7 +7,7 @@ settings:
 overrides:
   react: 0.0.0-experimental-06e89951-20250620
   react-dom: 0.0.0-experimental-06e89951-20250620
-  react-router: 0.0.0-experimental-b65537812
+  react-router: 0.0.0-experimental-7e26cc4bc
 
 importers:
 
@@ -26,8 +26,8 @@ importers:
         specifier: 0.0.0-experimental-06e89951-20250620
         version: 0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620)
       react-router:
-        specifier: 0.0.0-experimental-b65537812
-        version: 0.0.0-experimental-b65537812(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
+        specifier: 0.0.0-experimental-7e26cc4bc
+        version: 0.0.0-experimental-7e26cc4bc(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
     devDependencies:
       '@cloudflare/vite-plugin':
         specifier: ^1.7.4
@@ -108,11 +108,11 @@ importers:
         specifier: 0.0.0-experimental-06e89951-20250620
         version: 0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620)
       react-router:
-        specifier: 0.0.0-experimental-b65537812
-        version: 0.0.0-experimental-b65537812(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
+        specifier: 0.0.0-experimental-7e26cc4bc
+        version: 0.0.0-experimental-7e26cc4bc(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
       remix-utils:
         specifier: ^8.7.0
-        version: 8.7.0(react-router@0.0.0-experimental-b65537812(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)(zod@3.25.67)
+        version: 8.7.0(react-router@0.0.0-experimental-7e26cc4bc(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)(zod@3.25.67)
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
@@ -196,8 +196,8 @@ importers:
         specifier: 0.0.0-experimental-06e89951-20250620
         version: 0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620)
       react-router:
-        specifier: 0.0.0-experimental-b65537812
-        version: 0.0.0-experimental-b65537812(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
+        specifier: 0.0.0-experimental-7e26cc4bc
+        version: 0.0.0-experimental-7e26cc4bc(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
       react-server-dom-parcel:
         specifier: 0.0.0-experimental-06e89951-20250620
         version: 0.0.0-experimental-06e89951-20250620(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
@@ -257,8 +257,8 @@ importers:
         specifier: 0.0.0-experimental-06e89951-20250620
         version: 0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620)
       react-router:
-        specifier: 0.0.0-experimental-b65537812
-        version: 0.0.0-experimental-b65537812(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
+        specifier: 0.0.0-experimental-7e26cc4bc
+        version: 0.0.0-experimental-7e26cc4bc(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
     devDependencies:
       '@hiogawa/vite-rsc':
         specifier: 0.4.4
@@ -321,8 +321,8 @@ importers:
         specifier: 0.0.0-experimental-06e89951-20250620
         version: 0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620)
       react-router:
-        specifier: 0.0.0-experimental-b65537812
-        version: 0.0.0-experimental-b65537812(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
+        specifier: 0.0.0-experimental-7e26cc4bc
+        version: 0.0.0-experimental-7e26cc4bc(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
     devDependencies:
       '@hiogawa/vite-rsc':
         specifier: 0.4.4
@@ -2899,8 +2899,8 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
-  react-router@0.0.0-experimental-b65537812:
-    resolution: {integrity: sha512-GKSBunl/zm2ZVgu4j6ZcY0FV+49K1Cl67CXsXUT7tSUSDrvGwuCSlOPXzNT+ZYOAvgjOjRJGEGqICdPJS14mdg==}
+  react-router@0.0.0-experimental-7e26cc4bc:
+    resolution: {integrity: sha512-uM1+FFqb23J5AfdQBnPvdf6exoSb/sdvMdVpoimbGl65wM+cw45Sfyw+1G3FvhosZi+JbxLkeo9+cPb6P2gS/w==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: 0.0.0-experimental-06e89951-20250620
@@ -2935,7 +2935,7 @@ packages:
       intl-parse-accept-language: ^1.0.0
       is-ip: ^5.0.1
       react: 0.0.0-experimental-06e89951-20250620
-      react-router: 0.0.0-experimental-b65537812
+      react-router: 0.0.0-experimental-7e26cc4bc
       zod: ^3.22.4
     peerDependenciesMeta:
       '@edgefirst-dev/batcher':
@@ -5715,7 +5715,7 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-router@0.0.0-experimental-b65537812(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620):
+  react-router@0.0.0-experimental-7e26cc4bc(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620):
     dependencies:
       cookie: 1.0.2
       react: 0.0.0-experimental-06e89951-20250620
@@ -5732,12 +5732,12 @@ snapshots:
 
   regenerator-runtime@0.14.1: {}
 
-  remix-utils@8.7.0(react-router@0.0.0-experimental-b65537812(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)(zod@3.25.67):
+  remix-utils@8.7.0(react-router@0.0.0-experimental-7e26cc4bc(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)(zod@3.25.67):
     dependencies:
       type-fest: 4.41.0
     optionalDependencies:
       react: 0.0.0-experimental-06e89951-20250620
-      react-router: 0.0.0-experimental-b65537812(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
+      react-router: 0.0.0-experimental-7e26cc4bc(react-dom@0.0.0-experimental-06e89951-20250620(react@0.0.0-experimental-06e89951-20250620))(react@0.0.0-experimental-06e89951-20250620)
       zod: 3.25.67
 
   resolve-pkg-maps@1.0.0: {}

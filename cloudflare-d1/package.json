@@ -14,7 +14,7 @@
   "overrides": {
     "react": "0.0.0-experimental-06e89951-20250620",
     "react-dom": "0.0.0-experimental-06e89951-20250620",
-    "react-router": "0.0.0-experimental-b65537812"
+    "react-router": "0.0.0-experimental-7e26cc4bc"
   },
   "dependencies": {
     "@conform-to/react": "^1.7.2",
@@ -29,7 +29,7 @@
     "lucide-react": "^0.522.0",
     "react": "0.0.0-experimental-06e89951-20250620",
     "react-dom": "0.0.0-experimental-06e89951-20250620",
-    "react-router": "0.0.0-experimental-b65537812",
+    "react-router": "0.0.0-experimental-7e26cc4bc",
     "remix-utils": "^8.7.0",
     "tailwind-merge": "^3.3.1",
     "tw-animate-css": "^1.3.4",
