@@ -1,6 +1,6 @@
 "use server-entry";
 
-import type { unstable_ServerRouteObject as ServerRouteObject } from "react-router";
+import type { unstable_RSCRouteConfig as RSCRouteConfig } from "react-router";
 
 import "../browser";
 
@@ -23,5 +23,5 @@ export function routes() {
         },
       ],
     },
-  ] satisfies ServerRouteObject[];
+  ] satisfies RSCRouteConfig;
 }

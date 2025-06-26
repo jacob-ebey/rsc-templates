@@ -16,9 +16,9 @@ export default {
       // The incoming request.
       request,
       // How to call the React Server.
-      callServer: (request) => env.SERVER.fetch(request),
+      fetchServer: (request) => env.SERVER.fetch(request),
       // Provide the React Server touchpoints.
-      decode: createFromReadableStream,
+      createFromReadableStream,
       // Render the router to HTML.
       async renderHTML(getPayload) {
         const payload = await getPayload();

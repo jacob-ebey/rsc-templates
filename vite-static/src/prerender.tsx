@@ -12,18 +12,18 @@ import bootstrapScriptContent from "virtual:vite-rsc/bootstrap-script-content";
 
 export async function prerender(
   request: Request,
-  callServer: (request: Request) => Promise<Response>,
+  fetchServer: (request: Request) => Promise<Response>,
   saveToDisk?: boolean
 ): Promise<Response> {
   const response = await unstable_routeRSCServerRequest({
     request,
-    callServer: async (request) => {
+    fetchServer: async (request) => {
       const manifestURL = new URL(request.url);
       manifestURL.pathname += ".manifest";
 
       const [response, manifestResponse] = await Promise.all([
-        callServer(request),
-        !!saveToDisk && callServer(new Request(manifestURL)),
+        fetchServer(request),
+        !!saveToDisk && fetchServer(new Request(manifestURL)),
       ]);
       if (saveToDisk) {
         const url = new URL(request.url);
@@ -50,7 +50,7 @@ export async function prerender(
       }
       return response;
     },
-    decode: createFromReadableStream,
+    createFromReadableStream,
     async renderHTML(getPayload) {
       return await renderHTMLToReadableStream(
         React.createElement(unstable_RSCStaticRouter, { getPayload }),

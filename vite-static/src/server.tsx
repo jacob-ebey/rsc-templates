@@ -4,35 +4,17 @@ import {
   loadServerAction,
   renderToReadableStream,
 } from "@hiogawa/vite-rsc/rsc";
-import {
-  type unstable_DecodeCallServerFunction,
-  type unstable_DecodeFormActionFunction,
-  unstable_matchRSCServerRequest,
-} from "react-router";
+import { unstable_matchRSCServerRequest } from "react-router";
 
 import { routes } from "./routes/routes";
 
 export { routes };
 
-const decodeCallServer: unstable_DecodeCallServerFunction = async (
-  actionId,
-  reply
-) => {
-  const args = await decodeReply(reply);
-  const action = await loadServerAction(actionId);
-  return action.bind(null, ...args);
-};
-
-const decodeFormAction: unstable_DecodeFormActionFunction = async (
-  formData
-) => {
-  return await decodeAction(formData);
-};
-
-function callServer(request: Request) {
+function fetchServer(request: Request) {
   return unstable_matchRSCServerRequest({
-    decodeCallServer,
-    decodeFormAction,
+    decodeAction,
+    decodeReply,
+    loadServerAction,
     request,
     routes: routes(),
     generateResponse(match) {
@@ -49,5 +31,5 @@ export default async function handler(request: Request, saveToDisk?: boolean) {
     typeof import("./prerender")
   >("index");
 
-  return ssr.prerender(request, callServer, saveToDisk === true);
+  return ssr.prerender(request, fetchServer, saveToDisk === true);
 }
